@@ -1,0 +1,576 @@
+/* ==== ШРИФТЫ ==== */
+
+@font-face {
+  font-family: 'opensans-b';
+  src: local('opensans-b');
+  src: url('../fonts/opensans-b/opensans-b.eot');
+  src: url('../fonts/opensans-b/opensans-b.eot#iefix') format('embedded-opentype'),
+      url('../fonts/opensans-b/opensans-b.woff') format('woff'),
+      url('../fonts/opensans-b/opensans-b.woff2') format('woff2'),
+      url('../fonts/opensans-b/opensans-b.ttf') format('truetype'),
+      url('../fonts/opensans-b/opensans-b.svg#opensans-b') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tele2-b';
+  src: local('tele2-b');
+  src: url('../fonts/tele2-b/tele2-b.eot');
+  src: url('../fonts/tele2-b/tele2-b.eot#iefix') format('embedded-opentype'),
+      url('../fonts/tele2-b/tele2-b.woff') format('woff'),
+      url('../fonts/tele2-b/tele2-b.woff2') format('woff2'),
+      url('../fonts/tele2-b/tele2-b.ttf') format('truetype'),
+      url('../fonts/tele2-b/tele2-b.svg#tele2-b') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* == ДОПОЛНИТЕЛЬНЫЕ СТИЛИ == */
+
+.ff-opensans-b {
+  font-family: "opensans-b";
+}
+
+.ff-tele2-b {
+  font-family: "tele2-b";
+}
+
+.text-blue {
+  color: #8494ab;
+}
+
+.input,
+.select__selected,
+.option {
+  padding: 0 11px;
+  height: 42px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #e4e9ee;
+}
+
+.input::placeholder {
+  color: #bec6cf;
+}
+
+.input.invalid {
+  border-color: #da9b9c;
+}
+
+.cf {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* === ОСНОВНЫЕ СТИЛИ === */
+
+body {
+  min-width: 320px;
+}
+
+.wrapper {
+  padding-bottom: 100px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #101114;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 960px;
+  min-width: 960px;
+}
+
+/* ===== МЕНЮ ===== */
+
+.menu {
+  float: left;
+  margin-top: 78px;
+  width: 33.5%;
+}
+
+.menu__bar {
+  display: none;
+}
+
+.menu__item {
+  display: block;
+  padding: 26px 28px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #1F2229;
+}
+
+.menu__item:last-child {
+  border-top: 1px solid #1F2229;
+}
+
+.menu__item:hover,
+.menu__item--active {
+  background-color: #2a2d37;
+}
+
+.menu__item--minor {
+  background-color: #191c24;
+}
+
+.menu__item:hover,
+.menu__item--text-blue {
+  color: #808592;
+}
+
+/* === ОСНОВНОЙ БЛОК СТРАНИЦЫ === */
+
+.payments {
+  float: right;
+  margin-top: 78px;
+  width: 66.5%;
+}
+
+.payment {
+  padding: 45px 46px 45px 27px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #f7f8f8;
+}
+
+.payment__title {
+  padding-bottom: 14px;
+}
+
+.payment__description {
+  width: 157px;
+  line-height: 1.6;
+}
+
+/* ===== КАРТА ===== */
+
+.payment__form {
+  margin-top: 24px;
+}
+
+.card__title {
+  margin-bottom: 21px;
+  font-size: 22px;
+  letter-spacing: 0.1px;
+}
+
+.card__front,
+.card__back {
+  width: 350px;
+  height: 236px;
+  border: 1px solid #e4e9ee;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.card__front {
+  float: left;
+  position: relative;
+  z-index: 1;
+  padding: 20px 15px 0;
+  background-color: #f7f8f8;
+}
+
+.card__back {
+  float: right;
+  margin-top: -216px;
+  padding-top: 25px;
+}
+
+.card__label {
+  margin-bottom: 4px;
+}
+
+.card__number {
+  float: left;
+  margin-right: 10px;
+  width: 64px;
+}
+
+/* ===== SELECT starts */
+
+.card__validity {
+  margin-top: 13px;
+}
+
+.card__select {
+  float: left;
+  display: inline-block;
+  height: 42px;
+}
+
+.card__select--month {
+  width: 70px;
+}
+
+.card__select--year {
+  margin-left: 5px;
+  width: 86px;
+}
+
+.select__selected,
+.option {
+  height: 42px;
+  line-height: 42px;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.select__selected:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 11px;
+  width: 16px;
+  height: 8px;
+  background-image: url("../img/select_arrow.png");
+}
+
+.options--hidden {
+  display: none;
+}
+
+.option {
+  margin-top: -1px;
+  color: #8494ab;
+}
+
+.option:hover {
+  color: #383d43;
+}
+
+/* ==== SELECT ends */
+
+.card__holder {
+  margin-top: 12px;
+  width: 100%;
+  letter-spacing: -0.4px;
+}
+
+.card__stripe {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 42px;
+  background-color: #e4e9ee;
+}
+
+.cvv {
+  float: right;
+  position: relative;
+  margin-right: 14px;
+  width: 138px;
+  height: 64px;
+}
+
+.cvv__title {
+  margin-bottom: 4px;
+}
+
+.cvv__field {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 138px;
+  height: 42px;
+  border: 1px solid #e4e9ee;
+}
+
+.cvv__hint {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/hint.png");
+  cursor: pointer;
+}
+
+.cvv__hint:after {
+  display: none;
+  content: 'Три последние цифры\0aна обороте карты';
+  position: relative;
+  top: -45px;
+  left: -36px;
+  padding: 3px 5px;
+  width: 114px;
+  height: 30px;
+  font-size: 11px;
+  white-space: pre;
+  border: 1px solid #8494ab;
+  background-color: #fff;
+}
+
+.cvv__hint:hover:after {
+  display: block;
+}
+
+.cvv__hint:hover {
+  background-image: url("../img/hint_hover.png");
+}
+
+/* === КОНЕЦ КАРТЫ === */
+
+.payment__submit {
+  display: block;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 11px 31px 12px;
+  font-size: 14px;
+  color: #fff;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  background: linear-gradient(to bottom, #0059be, #004ea6);
+}
+
+.payment__submit:hover {
+  background: linear-gradient(to bottom, #014fa9, #02356f);
+  -webkit-transform: translateY(1px);
+     -moz-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+       -o-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.payment__submit:active {
+  background: linear-gradient(to bottom, #013f86, #01254e);
+  -webkit-transform: translateY(1px);
+     -moz-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+       -o-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.payments__notice {
+  padding: 24px 45px 28px 28px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7F8591;
+  background-color: #373C43;
+}
+
+.payments__notice p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ===== MOBILE < 1000px ===== */
+
+@media (max-width: 999px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .menu {
+    float: none;
+    position: absolute;
+    z-index: 2;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .menu__bar {
+    display: block;
+    position: relative;
+    height: 48px;
+    line-height: 44px;
+    color: white;
+    background-color: #2a2d37;
+    border-bottom: 1px solid #5f6886;
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(52, 54, 58, 0.2);
+            box-shadow: 0px 0px 8px 2px rgba(52, 54, 58, 0.2);
+    cursor: pointer;
+  }
+
+  .menu__bar:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: #7F8591;
+    -webkit-box-shadow: 0 10px #7F8591, 0 20px #7F8591;
+            box-shadow: 0 10px #7F8591, 0 20px #7F8591;
+  }
+
+  .menu__title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .menu__items {
+    display: none;
+    margin: 0 auto;
+    width: 586px;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(52, 54, 58, 0.6);
+            box-shadow: 0px 0px 10px 2px rgba(52, 54, 58, 0.6);
+  }
+
+  .menu__items.visible {
+    display: block!important;
+  }
+
+  .menu__item {
+    padding: 18px 46px 20px;
+    font-size: 15px;
+  }
+
+  .payments {
+    float: none;
+    margin: 75px auto 0;
+    width: 586px;
+  }
+
+  .payment {
+    padding-top: 33px;
+  }
+
+  .cvv__hint.active:after {
+    display: block;
+  }
+}
+
+/* === SMALL MOBILE < 600px === */
+
+@media (max-width: 599px) {
+
+  .input,
+  .select__selected,
+  .option {
+    padding: 0 10px;
+    height: 33px;
+    font-size: 13px;
+  }
+
+  .select__selected,
+  .option {
+    line-height: 33px;
+  }
+
+  .wrapper {
+    padding-bottom: 50px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu__bar {
+    height: 45px;
+    line-height: 42px;
+  }
+
+  .menu__bar:before {
+    top: 14px;
+    left: 10px;
+    width: 30px;
+    height: 2px;
+    -webkit-box-shadow: 0 8px #7F8591, 0 16px #7F8591;
+            box-shadow: 0 8px #7F8591, 0 16px #7F8591;
+  }
+
+  .menu__title {
+    font-size: 16px;
+  }
+
+  .menu__items {
+    width: 100%;
+    text-align: center;
+  }
+
+  .payments {
+    margin: 65px auto 0;
+    width: 320px;
+  }
+  
+  .payment {
+    padding: 22px 15px 28px;
+    font-size: 15px;
+  }
+
+  .payment__form {
+    margin-top: 22px;
+  }
+
+  .payment__title {
+    padding-bottom: 10px;
+  }
+
+  .card__title {
+    margin-bottom: 17px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .card__front,
+  .card__back {
+    float: none;
+    width: 292px;
+    height: 210px;
+  }
+
+  .card__front {
+    padding: 15px 12px 0;
+  }
+
+  .card__back {
+    margin-top: 15px;
+  }
+
+  .card__number {
+    width: 55px;
+  }
+
+  .card__select--month {
+    width: 63px;
+  }
+
+  .card__select--year {
+    width: 73px;
+  }
+
+  .card__stripe {
+    margin-bottom: 12px;
+    height: 33px;
+  }
+
+  .cvv {
+    height: 56px;
+  }
+
+  .cvv__hint {
+    bottom: 2px;
+  }
+
+  .cvv__hint:hover:after {
+    left: -67px;
+  }
+
+  .payment__submit {
+    margin: 20px auto 0;
+    padding: 10px 25px 12px;
+    font-size: 12px;
+  }
+
+  .payments__notice {
+    margin: 0 auto;
+    padding: 20px 25px 25px;
+    width: 320px;
+  }
+
+}
+
+
