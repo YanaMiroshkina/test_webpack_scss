@@ -3,7 +3,12 @@
 1. npm install
 2. npm run start
 
+В папке dist находится сборка для продакшена (с минифицированными css и js). 
+Можно скачать ее и открыть index.html.
+
 ## Примечания:
+
+*Для меня главное - хорошая читаемость кода. И такая css-вложенность, которая читаемости помогает, а не мешает.*
 
 **1. Мне удобнее в .sass / .scss писать полные имена классов сразу, без вложенности через & - просто потому, что так нагляднее.**
 
@@ -22,15 +27,15 @@
   padding: 26px 28px 25px;
   font-size: 18px;
   color: #fff;
-  background-color: #1F2229;
+  background-color: $color_menu;
   
   &:last-child {
-    border-top: 1px solid #1F2229;
+    border-top: 1px solid $color_menu;
   }
 
   &:hover,
   &--active {
-    background-color: #2a2d37;
+    background-color: $color_menu_active;
   }
 }
 ```
@@ -46,7 +51,7 @@
   height: 42px;
   font-size: 16px;
   background-color: #fff;
-  border: 1px solid #e4e9ee;
+  border: 1px solid $color_light_grey;
 }
 ```
 
@@ -58,7 +63,7 @@
   height: 42px;
   font-size: 16px;
   background-color: #fff;
-  border: 1px solid #e4e9ee;
+  border: 1px solid $color_light_grey;
 }
 
 .input {

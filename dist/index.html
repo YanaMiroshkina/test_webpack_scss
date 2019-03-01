@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Test with Webpack and SCSS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.cdffc9e3a595d3b173e0.css?5730b8681b1c5f03d0d6">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+
+      <!-- ОСНОВНОЙ ЦЕНТРИРОВАННЫЙ КОНТЕНТ -->
+
+      <div class="container cf">
+
+        <!-- МЕНЮ -->
+        
+        <div data-js-menu class="menu ff-opensans-b">
+
+          <div data-js-toggle="open-menu" class="menu__bar">
+            <div class="menu__icon"></div>
+            <p class="menu__title">Платежи</p>
+          </div>
+
+          <nav class="menu__items">
+            
+            <a data-js-toggle="open-menu" href="#lk" class="menu__item">Личный кабинет</a>
+            <a data-js-toggle="open-menu" href="#payments" class="menu__item menu__item--active menu__item--text-blue">Платежи</a>
+            <a data-js-toggle="open-menu" href="#history" class="menu__item">История платежей</a>
+            <a data-js-toggle="open-menu" href="#settings" class="menu__item menu__item--minor">Настройки</a>
+            <a data-js-toggle="open-menu" href="#logout" class="menu__item menu__item--minor menu__item--text-blue">Выйти</a>
+            
+          </nav>
+
+        </div>
+
+        <!-- КОНЕЦ МЕНЮ -->
+
+        <!-- ОСНОВНОЙ БЛОК НА СТРАНИЦЕ -->
+
+        <main class="payments">
+          
+          <!-- ОСНОВНОЙ БЛОК ПЛАТЕЖА -->
+
+          <div class="payment">
+
+            <!-- БЛОК ИНФОРМАЦИИ О ПЛАТЕЖЕ -->
+    
+            <table>
+              <thead>
+                <tr>
+                  <td colspan="2" class="payment__title ff-tele2-b text--blue">Информация по оплате:</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="payment__description text--blue">Номер счета:</td>
+                  <td>87123658716587</td>
+                </tr>
+                <tr>
+                  <td class="payment__description text--blue">Сумма платежа:</td>
+                  <td>100 руб.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- КОНЕЦ БЛОКА ИНФОРМАЦИИ О ПЛАТЕЖЕ -->
+
+            <!-- ФОРМА ПЛАТЕЖА -->
+
+            <form data-js-form="payment" class="payment__form" method="POST">
+
+              <div class="payment__card card cf">
+
+                <p class="card__title ff-opensans-b">Данные банковской карты</p>
+
+                <!-- ЛИЦЕВАЯ ЧАСТЬ КАРТЫ -->
+
+                <div class="card__front">
+                  
+                  <div class="cf">
+                    <p class="card__label text--blue">Номер карты</p>
+                    <input data-js-number="card" class="card__number input" type="text" 
+                    maxlength="4" tabindex="1">
+                    <input data-js-number="card" class="card__number input" type="text" maxlength="4" tabindex="2">
+                    <input data-js-number="card" class="card__number input" type="text" maxlength="4" tabindex="3">
+                    <input data-js-number="card" class="card__number input" type="text" maxlength="4" tabindex="4">
+                  </div>
+
+                  <div class="card__validity">
+
+                    <p class="card__label text--blue">Срок действия</p>
+
+                    <div data-js-select="month" class="card__select card__select--month select">
+                      <p data-js-selected-value class="select__selected">04</p>
+                      <div data-js-options class="options options--hidden">
+                        <p data-js-option="01" class="option">01</p>
+                        <p data-js-option="02" class="option">02</p>
+                        <p data-js-option="03" class="option">03</p>
+                        <p data-js-option="04" class="option">04</p>
+                        <p data-js-option="05" class="option">05</p>
+                        <p data-js-option="06" class="option">06</p>
+                        <p data-js-option="07" class="option">07</p>
+                        <p data-js-option="08" class="option">08</p>
+                        <p data-js-option="09" class="option">09</p>
+                        <p data-js-option="10" class="option">10</p>
+                        <p data-js-option="11" class="option">11</p>
+                        <p data-js-option="12" class="option">12</p>
+                      </div>
+                    </div>
+
+                    <div data-js-select="year" class="card__select card__select--year select">
+                      <p data-js-selected-value class="select__selected">2018</p>
+                      <div data-js-options class="options options--hidden">
+                        <p data-js-option="2019" class="option">2019</p>
+                        <p data-js-option="2020" class="option">2020</p>
+                        <p data-js-option="2021" class="option">2021</p>
+                        <p data-js-option="2022" class="option">2022</p>
+                        <p data-js-option="2023" class="option">2023</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <input data-js-cardholder class="card__holder input" type="text" placeholder="Держатель карты" tabindex="5">
+
+                </div>
+
+                <!-- КОНЕЦ ЛИЦЕВОЙ ЧАСТИ КАРТЫ -->
+
+                <!-- ОБОРОТНАЯ ЧАСТЬ КАРТЫ -->
+
+                <div class="card__back">
+
+                  <div class="card__stripe"></div>
+
+                  <div class="cvv">
+
+                    <p class="card__label text--blue">Код CVV2 / CVC2</p>
+
+                    <input data-js-number="cvv" class="cvv__field input" maxlength="3" tabindex="6">
+                    <div data-js-cvv-hint class="cvv__hint"></div>
+                    
+                  </div>
+                  
+                </div>
+
+                <!-- КОНЕЦ ОБОРОТНОЙ ЧАСТИ КАРТЫ -->
+                
+              </div>
+
+              <button class="payment__submit ff-opensans-b" type="submit">Оплатить</button>
+              
+            </form>
+
+            <!-- КОНЕЦ ФОРМЫ ПЛАТЕЖА -->
+
+          </div>
+
+          <!-- КОНЕЦ ОСНОВНОГО БЛОКА ПЛАТЕЖА -->
+
+          <!-- ПОЯСНЕНИЕ К ПЛАТЕЖУ -->
+
+          <div class="payments__notice">
+
+            <p>
+              Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+            </p>
+
+            <p>
+              Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+            </p>
+
+            <p>
+              Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+            </p>
+
+            <p>
+              Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+            </p>
+            
+          </div>
+
+          <!-- КОНЕЦ ПОЯСНЕНИЯ К ПЛАТЕЖУ -->
+
+        </main>
+
+        <!-- КОНЕЦ ОСНОВНОГО БЛОКА НА СТРАНИЦЕ -->
+        
+      </div>
+
+      <!-- КОНЕЦ ОСНОВНОГО ЦЕНТРИРОВАННОГО КОНТЕНТА -->
+      
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="main.8d297d4fdf2389fb299a.js?5730b8681b1c5f03d0d6"></script>
+  </body>
+</html>

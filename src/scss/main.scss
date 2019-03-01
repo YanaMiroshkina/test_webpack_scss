@@ -28,7 +28,7 @@
 
 /* == ДОПОЛНИТЕЛЬНЫЕ СТИЛИ == */
 
-$color_menu_item: #1F2229;
+$color_menu: #1F2229;
 $color_menu_active: #2a2d37;
 $color_light_grey: #e4e9ee;
 $color_blue: #8494ab;
@@ -109,10 +109,10 @@ body {
   padding: 26px 28px 25px;
   font-size: 18px;
   color: #fff;
-  background-color: $color_menu_item;
+  background-color: $color_menu;
   
   &:last-child {
-    border-top: 1px solid $color_menu_item;
+    border-top: 1px solid $color_menu;
   }
 
   &:hover,
