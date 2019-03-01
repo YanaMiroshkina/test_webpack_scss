@@ -16,13 +16,14 @@
 
         <!-- МЕНЮ -->
         
-        <div class="menu ff-opensans-b">
+        <div data-js-menu class="menu ff-opensans-b">
 
           <div data-js-toggle="open-menu" class="menu__bar">
+            <div class="menu__icon"></div>
             <p class="menu__title">Платежи</p>
           </div>
 
-          <nav data-js-menu-items class="menu__items">
+          <nav class="menu__items">
             
             <a data-js-toggle="open-menu" href="#lk" class="menu__item">Личный кабинет</a>
             <a data-js-toggle="open-menu" href="#payments" class="menu__item menu__item--active menu__item--text-blue">Платежи</a>
@@ -49,16 +50,16 @@
             <table>
               <thead>
                 <tr>
-                  <td colspan="2" class="payment__title ff-tele2-b text-blue">Информация по оплате:</td>
+                  <td colspan="2" class="payment__title ff-tele2-b text--blue">Информация по оплате:</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="payment__description text-blue">Номер счета:</td>
+                  <td class="payment__description text--blue">Номер счета:</td>
                   <td>87123658716587</td>
                 </tr>
                 <tr>
-                  <td class="payment__description text-blue">Сумма платежа:</td>
+                  <td class="payment__description text--blue">Сумма платежа:</td>
                   <td>100 руб.</td>
                 </tr>
               </tbody>
@@ -79,7 +80,7 @@
                 <div class="card__front">
                   
                   <div class="cf">
-                    <p class="card__label text-blue">Номер карты</p>
+                    <p class="card__label text--blue">Номер карты</p>
                     <input data-js-number="card" class="card__number input" type="text" 
                     maxlength="4" tabindex="1">
                     <input data-js-number="card" class="card__number input" type="text" maxlength="4" tabindex="2">
@@ -89,7 +90,7 @@
 
                   <div class="card__validity">
 
-                    <p class="card__label text-blue">Срок действия</p>
+                    <p class="card__label text--blue">Срок действия</p>
 
                     <div data-js-select="month" class="card__select card__select--month select">
                       <p data-js-selected-value class="select__selected">04</p>
@@ -136,7 +137,7 @@
 
                   <div class="cvv">
 
-                    <p class="card__label text-blue">Код CVV2 / CVC2</p>
+                    <p class="card__label text--blue">Код CVV2 / CVC2</p>
 
                     <input data-js-number="cvv" class="cvv__field input" maxlength="3" tabindex="6">
                     <div data-js-cvv-hint class="cvv__hint"></div>

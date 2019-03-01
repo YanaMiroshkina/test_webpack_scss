@@ -54,6 +54,9 @@ $(function() {
     hide_options();
 
     if (option) {
+      // меняю только текст, а не значение data-js-selected-value,
+      // так как текст для отображения в html все равно менять надо,
+      // а дополнительное изменение атрибута только утяжелит код
       selected.text(option);
     } else if (click_on_selected) {
       if (options_was_hidden) {
@@ -194,20 +197,22 @@ $(function() {
         "validity_year": year,
         "cvv": valid_input_cvv
       };
-      $.ajax({
-        url: '#',
-        type: 'POST',
-        data: {
-          'action': '#',
-          'data': data
-        },
-        success: function() {
-          // не стала реализовывать логику модалки,
-          // просто alert
-          alert("Ваш платеж успешно совершен!");
-          clear_inputs();
-        }
-      });
+      // $.ajax({
+      //   url: '#',
+      //   type: 'POST',
+      //   data: {
+      //     'action': '#',
+      //     'data': data
+      //   },
+      //   success: function() {
+      //     
+      //   }
+      // });
+
+      // не стала реализовывать логику модалки,
+      // просто alert
+      alert("Ваш платеж успешно совершен!");
+      clear_inputs();
     }
 
   });
@@ -225,11 +230,11 @@ $(function() {
 
 
   var el_toggle_menu = $("[data-js-toggle='open-menu']"),
-  menu_items = $("[data-js-menu-items]");
+  menu = $("[data-js-menu]");
 
   el_toggle_menu.on('click', function(e) {
     e.stopPropagation();
-    menu_items.toggleClass('visible');
+    menu.toggleClass('visible');
   });
 
 
@@ -251,5 +256,4 @@ $(function() {
   });
 
 });
-
 
